@@ -1,0 +1,44 @@
+
+
+<h1>Registration Form  dsjdhjs  snndbkjshdj</h1>
+
+<hr>
+
+<div style="padding: 1.5%; margin: 2%; background-color: rgb(163, 220, 201);">
+    <div>
+        <div><b>Name</b></div>
+    <input type="text" name="text" placeholder="Enter Your Name" class="form-control">
+</div>
+<br>
+    <div><b>Phone Number</b></div>
+    <input type="number" name="number" placeholder="enter your Number" class="form-control">
+    <br>
+
+    <div><b>Email Id</b></div>
+    <input type="email" name="email" placeholder="enter your email" class="form-control">
+    <br>
+    <div><b>Gender</b></div>
+    <br>
+    
+    <form>
+        <label for="male"></label>
+        <input type="radio" id="male" name="gender" value="Male"><b>Male</b>&nbsp;&nbsp;
+        
+        <label for="female"></label>
+        <input type="radio" id="female" name="gender" value="Female"><b>Female</b>&nbsp;&nbsp;
+        
+        <label for="other"></label>
+        <input type="radio" id="other" name="gender" value="Other"><b>Other</b>&nbsp;&nbsp;
+    </form>
+    <br>
+    <div>
+        <br>
+        <input type="checkbox" name="checkbox" value="checkbox"><b>Check All Feilds</b> 
+    </div>
+    <br>
+
+    <button button mat-raised-button (click)="onbtn()">Submit </button>&nbsp;&nbsp;
+    <button button mat-raised-button color="warn">Cancel </button>
+
+</div>
+<hr>

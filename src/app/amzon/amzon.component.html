@@ -1,0 +1,41 @@
+
+<div class="color">
+  <div class="page">
+    <img src="../../assets/Amazon-Emblem.jpg" width="150" height="80">
+    <form class="example" action="/action_page.php" style="display: flex;">
+      <input type="text" placeholder="Search Amzon.in" name="search" class="form-control">
+      <button type="submit"><i class="fa fa-search"></i>search</button>
+    </form>
+    <div>
+      <ul class="container">
+        <li class="item" (click)="showCategoryDepartment()">Category</li>
+        
+        <li class="item" (click)="showWishListDepartment()">Wish List</li>
+       
+        <li class="item" (click)=" showDealsDepartment()">Deals</li>
+        
+        <li class="item">Sell</li>
+
+        <li class="item">Amazon Mini Tv</li>
+        <li class="item" (click)="PopupShow()"> Amzon Prime</li>
+        <div class="primePopup" *ngIf=" primePopup">
+         <app-amazon-prime (popupClose)="hidePopup2()"></app-amazon-prime>
+        </div>
+        <li class="item" (click)="showPopup()"> Book Tickets</li>
+          <div class="popup" *ngIf="bookTicketsComponetsPopup">
+            <app-book-tickets (closePopup)="hidePopup()"></app-book-tickets>
+            </div> 
+      </ul>
+    </div>
+   </div>
+  </div>
+    <div *ngIf="type == 1">
+      <app-category></app-category>
+    </div>
+    <div *ngIf="type == 2">
+      <app-wish-list></app-wish-list>
+    </div>
+      <div *ngIf="type == 3">
+        <app-deals></app-deals>
+      </div>
+      >

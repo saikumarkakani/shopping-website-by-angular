@@ -1,0 +1,41 @@
+.clr{
+    color: rgb(238, 237, 242);
+ background-color: rgb(11, 11, 11);
+ text-align: center;
+ padding-top: 0%;
+    
+}
+.menu{
+    
+    background-color: rgb(20, 19, 19);
+    margin: 0.1%;
+    padding: 1%;
+   list-style-type: none;
+   height: 80vh;
+   text-align: center;
+
+   
+   
+}
+.menu-item{
+    margin-top: 1px;
+    cursor: pointer;
+    color: rgb(54, 210, 184);
+
+
+    
+}
+
+.menu-item:hover{
+    color: black;
+    background-color: rgb(178, 213, 219);
+}
+.image-container {
+    float: left;
+    padding:15.5%;
+    padding-top:0%;
+    margin-left: 87%;
+    
+
+  }
+  

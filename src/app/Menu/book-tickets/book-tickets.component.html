@@ -1,0 +1,35 @@
+<form>
+  <h3>Book Your Tickets Here! </h3>
+  <span class="icon-close" (click)="closeDepartmentPopup()">&#10006;</span>
+  <hr>
+    <div class="form-group">
+     <label><b>Movie Name</b></label>
+     <input type="text" value="" placeholder="Movie Name" name="movieName" class="form-control" [(ngModel)]="tickets.movieName">
+    </div>
+    <div class="form-group">
+        <label for="birthdate"><b>Date</b></label>
+        <input type="date" id="date" name="Date" class="form-control" [(ngModel)]="tickets.Date">
+    </div>
+    <div class="form-group">
+    <label> <b>Place</b></label>
+    <input type="text" value="" placeholder="Place" name="place" class="form-control" [(ngModel)]="tickets.place">
+     </div>
+     <div class="form-group">
+        <label><b>Phone Number</b></label>
+        <input type="number" value="" placeholder="Phone Number"  name="phoneNumber" class="form-control" [(ngModel)]="tickets.phoneNumber">
+     </div>
+     <div class="form-group">
+      <label><b>Number of Tickets</b></label>
+      <input type="number" value="" placeholder="how many tickets" name="ticket" class="form-control" [(ngModel)]="tickets.ticket">
+   </div>
+     <div class="form-group">
+        <label><b> Gender </b></label ><br>
+        <input type="radio" name="Gender" value="Male" [(ngModel)]="tickets.gender"> Male &nbsp;
+        <input type="radio" name="Gender" value="Female" [(ngModel)]="tickets.gender"> Female &nbsp;
+        <input type="radio" name="Gender" value="Others"[(ngModel)]="tickets.gender"> Others &nbsp;
+     </div>
+     <br>
+     <div>
+        <input type="submit" value="Book Now" class="btn btn-primary" (click)="saveData()"> &nbsp;
+     </div>
+</form>

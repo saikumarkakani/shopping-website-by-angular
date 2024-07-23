@@ -1,0 +1,92 @@
+.page{
+    
+    background-color: black;
+ padding-left:3%;
+}
+.bar{
+    padding-left:1%;
+    background-color: black;
+}
+.color{
+    background-color: black;
+    padding: 1%;
+}
+
+form.example input[type=text] {
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid grey;
+    float: left;
+    width: 90%;
+    background: #f1f1f1;
+}
+  
+  
+  form.example button {
+    float: left;
+    width: 8%;
+    padding: 5px;
+    background: #ddbd49;
+    color: white;
+   
+    font-size: 16px;
+    border: 1px solid rgb(141, 137, 121);
+    border-left: none;
+    cursor: pointer;
+  }
+  
+  form.example button:hover {
+    background: #2bdeb1;
+  }
+  
+  form.example::after {
+    content: "";
+    clear: both;
+  }
+  .container {
+    display:inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0%;
+    margin: 0%;
+    gap: 1%;
+  }
+  
+  .item {
+    display: grid;
+    width:1%; /* Set the width of each item */
+    margin: 1%; /* Add some margin to create space between items */
+    color: #f1f1f1;
+    list-style-type: none;
+    text-align: center;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); 
+    cursor: pointer;
+     padding: 0%;
+  }
+.item:hover{
+  color: #d817c5;
+}
+  .top{
+    margin-top: 1%;
+  }
+  .popup{
+
+    position: fixed;
+    top: 20%;
+    left: 35%;
+    background-color: rgb(240, 167, 126);
+    padding: 20px;
+    width: 33%;
+    color: #0a0a0a;
+    cursor: pointer;
+}
+.primePopup{
+  position: fixed;
+  top: 20%;
+  left: 30%;
+  background-color: rgb(57, 144, 216);
+  padding: 20px;
+  width: 30% ;
+  color: #0a0a0a;
+  cursor: pointer;
+}

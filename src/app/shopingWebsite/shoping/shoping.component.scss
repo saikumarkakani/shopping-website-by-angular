@@ -1,0 +1,486 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #edebeb;
+    background-color: #666;
+}
+
+header {
+    background-color: rgb(227, 224, 224);
+    color: black;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    margin-right: 200px;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+
+}
+
+
+.search-bar {
+    padding: 6px;
+    border: none;
+    border-radius: 200px;
+    background-color: rgb(245, 244, 244);
+    color: #0b0a0a;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-left: 5%;
+    width: 400px;
+    /* Adjust the width as needed */
+    cursor: pointer;
+}
+
+.search-button {
+    position: relative;
+    overflow: hidden;
+    background-color: rgb(245, 244, 244);
+    ;
+    /* Button background color */
+    color: #080808;
+    /* Button text color */
+    border: none;
+    padding: 6px 20px;
+    border-radius: 20px;
+    /* Adjust the border-radius to control the curve */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-button:hover {
+    background-color: rgb(6, 6, 6);
+    color: #fefcfc;
+
+}
+
+.search-button ::after {
+    content: "";
+    position: absolute;
+    background-color: rgba(7, 7, 7, 0.4);
+    /* Ripple color with opacity */
+    border-radius: 50%;
+    transform: scale(0);
+    /* Initial scale of the ripple */
+    animation: ripple 0.5s linear;
+    pointer-events: none;
+    /* Allow button click through the ripple */
+
+}
+
+.search-button.hovered {
+    border: 2px solid #4aed88;
+}
+
+@keyframes ripple {
+    to {
+        transform: scale(5);
+        /* Scale the ripple to make it expand */
+        opacity: 0;
+        /* Fade out the ripple */
+    }
+}
+
+
+
+
+.popup{
+
+    position: fixed;
+    top: 20%;
+    left: 35%;
+    background-color: rgb(240, 167, 126);
+    padding: 20px;
+    width: 33%;
+    color: #0a0a0a;
+    cursor: pointer;
+}
+
+/* ... Other styles ... */
+
+/* ... Other styles ... */
+
+
+
+
+
+/* ... Other header styles ... */
+.lists {
+    background-color: rgb(227, 224, 224);
+    color: #3b3b3b;
+    font-size: large;
+    cursor: pointer;
+    padding-left: 25%;
+
+
+}
+
+.single-line-list li {
+    display: inline-block;
+    list-style: none;
+    padding: 6% 90;
+    margin: 1%;
+    margin-left: 4%;
+    transition: background-color 0.2s, color 0.2s;
+    /* Add a smooth transition effect */
+}
+
+.single-line-list li:hover {
+    background-color: #2e2a2a;
+    color: #fefcfc;
+    cursor: pointer;
+}
+
+
+
+/* Style for the category cards container */
+.category-carousel {
+    overflow: hidden;
+}
+
+.category-cards {
+    display: flex;
+    margin: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.category-card {
+    width: 20%;
+    /* Set a percentage width */
+    height: 150px;
+    border-radius: 50%;
+    background-color: #f7f8f9;
+    color: #0b0a0a;
+    text-align: center;
+    padding: 20px;
+    margin-right: 2%;
+    /* Adjust spacing between cards */
+    box-shadow: 0 2px 4px rgba(245, 244, 244, 0.2);
+    transition: background-color 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .category-cards {
+        flex-direction: column;
+        /* Stack cards vertically on mobile */
+    }
+
+    .category-card {
+        width: 100%;
+        /* Full width on mobile */
+        margin-right: 0;
+        /* No margin between cards on mobile */
+        margin-bottom: 20px;
+        /* Add spacing between cards */
+    }
+
+    /* Adjust other styles for mobile if needed */
+}
+
+
+.category-card img {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 10px;
+    border-radius: 50%;
+    /* This creates a circular shape */
+    transition: transform 0.2s ease-in-out;
+}
+
+.category-card h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.category-card p {
+    font-size: 14px;
+}
+
+/* Individual styles for each card */
+.mobiles {
+    background-color: #fcfbfa;
+    cursor: pointer;
+}
+
+.fashion {
+    background-color: #fcfbfa;
+    cursor: pointer;
+}
+
+.grocery {
+    background-color: #fcfbfa;
+    cursor: pointer;
+}
+
+/* Hover effect for the cards */
+.category-card img:hover {
+
+    transform: translateY(-5px);
+}
+
+
+
+
+
+
+
+
+#myCarousel .carousel-inner {
+    position: relative;
+    width: 100%;
+    padding-bottom: 1%;
+    /* 4:3 aspect ratio (adjust as needed) */
+    overflow: hidden;
+}
+
+#myCarousel img {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+// .button {
+//     border-radius: 60px;
+//     padding: 8px 30px;
+//     background-color: #f1eb36;
+//     color: #ddd;
+//     cursor: pointer;
+
+// }
+
+/* Reset some default styles and set a basic page layout */
+body,
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Style the product row */
+.product-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -10px;
+    flex-wrap: nowrap;
+    /* Prevent cards from wrapping to the next row */
+}
+
+.product-card {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 20px;
+    flex: 0 0 calc(25% - 20px);
+    /* 4 columns in a row */
+    margin: 10px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 1%;
+}
+
+
+.product-card h2 {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.product-card p {
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}
+
+//  button {
+
+//    background-color: #f7f14b;
+//    color: #0c0c0c;
+//      border: none;
+//      border-radius: 20px;
+//     padding: 10px 20px;
+//      font-size: 16px;
+//      cursor: pointer;
+
+
+//  }
+
+
+/* Add styling for your header and footer here */
+
+/* Apply styles to the curved button */
+.curved-button {
+    position: relative;
+    overflow: hidden;
+    background-color: #f7f14b;
+    /* Button background color */
+    color: #080808;
+    /* Button text color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    /* Adjust the border-radius to control the curve */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    /* Smooth transition for background color */
+}
+
+/* Add hover effect */
+.curved-button:hover {
+    background-color: #f4ec60;
+    /* Change the background color on hover */
+}
+
+/* Ripple effect */
+.curved-button::after {
+    content: "";
+    position: absolute;
+    background-color: rgba(245, 228, 76, 0.4);
+    /* Ripple color with opacity */
+    border-radius: 50%;
+    transform: scale(0);
+    /* Initial scale of the ripple */
+    animation: ripple 0.5s linear;
+    pointer-events: none;
+    /* Allow button click through the ripple */
+}
+
+/* Apply border when hovered */
+.curved-button.hovered {
+    border: 2px solid #0d0d0d;
+}
+
+@keyframes ripple {
+    to {
+        transform: scale(5);
+        /* Scale the ripple to make it expand */
+        opacity: 0;
+        /* Fade out the ripple */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Style the footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-section p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    color: #efecec;
+    text-decoration: none;
+
+}
+
+.footer-bottom {
+    background-color: #222;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 12px;
+}
+
+.footer-section.social ul li {
+    display: inline;
+    margin-right: 10px;
+    position: relative;
+}
+
+.footer-section.social ul li img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.footer-section.social ul li:hover img {
+    transform: translateY(-5px);
+}

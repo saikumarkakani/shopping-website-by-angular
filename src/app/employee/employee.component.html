@@ -1,0 +1,41 @@
+<div>
+    <h2>Employees</h2>
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Designation</th>
+        <th>Actions</th>
+      </tr>
+      <tr *ngFor="let employee of employees">
+        <td>{{ employee.id }}</td>
+        <td>{{ employee.name }}</td>
+        <td>{{ employee.designation }}</td>
+        <td>
+          <button (click)="editEmployee(employee)">Edit</button>
+          <button (click)="deleteEmployee(employee.id)" >Delete</button>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div>
+    <h2 class="hy">Add Employee</h2>
+    <form>
+      <label>Name:</label>
+      <input type="text" [(ngModel)]="newEmployee.name" name="name">
+      <label>Designation:</label>
+      <input type="text" [(ngModel)]="newEmployee.designation" name="designation">
+      <button (click)="addEmployee()">Add</button>
+    </form>
+  </div>
+  <div *ngIf="editingEmployee">
+    <h2 class="hy">Edit Employee</h2>
+    <form>
+      <label>Name:</label>
+      <input type="text" [(ngModel)]="editingEmployee.name" name="name">
+      <label>Designation:</label>
+      <input type="text" [(ngModel)]="editingEmployee.designation" name="designation">
+      <button (click)="updateEmployee()">Update</button>
+    </form>
+  </div>
+  

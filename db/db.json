@@ -1,0 +1,21 @@
+{
+  "Product": [
+    {
+      "id": 1,
+      "name": "Apple",
+      "price": 80000
+    },
+    {
+      "id": 2,
+      "name": "Dell",
+      "price": 55000
+    }
+  ],
+  "employees": [
+    {
+      "name": "Ethin hunt",
+      "designation": "Agent ",
+      "id": 1
+    }
+  ]
+}
